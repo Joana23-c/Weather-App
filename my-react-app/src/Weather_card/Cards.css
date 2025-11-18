@@ -1,0 +1,13 @@
+
+.location{
+    font-size: 30px;
+    text-align: center;
+    color: aliceblue;
+    line-height: 1;   
+}
+.temperature{
+    text-align: center;
+    font-size: 30px;
+    color: aliceblue;
+    line-height: 1;   
+}

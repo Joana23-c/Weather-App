@@ -8,7 +8,7 @@
     align-items: center;
 }
 .search-bar{
-    display: flex;
+    /* display: flex; */
     /* flex-direction: column; */
     align-items: center;
     gap:12px;
@@ -19,15 +19,5 @@
     outline: none;
     border-radius: 40px;
     padding-left: 25px;
-}
 
-.location{
-    font-size: 30px;
-    color: aliceblue;
-    line-height: 1;   
-}
-.temperature{
-    font-size: 30px;
-    color: aliceblue;
-    line-height: 1;   
 }
