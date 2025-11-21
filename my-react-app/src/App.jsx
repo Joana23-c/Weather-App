@@ -8,10 +8,6 @@ function App() {
     <div className="cards">
       <SearchBtn/>
     </div>
-    
-    // <div className="cards">
-    //   <Cards />
-    // </div>
   )
 }
 

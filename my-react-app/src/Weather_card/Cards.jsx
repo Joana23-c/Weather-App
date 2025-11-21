@@ -1,3 +1,5 @@
+import React,{useEffect} from "react";
+import useSearch from "../useSearch.jsx";
 import "./Cards.css"
 import search_icon from "../assets/search.png"
 import clear from "../assets/clear.png"
@@ -29,16 +31,26 @@ import wind from "../assets/wind.png"
     }
 
 
+
 function Cards (props){
-    
+    const weather = useSearch(props.city);
+    console.log( weather);
+
+      if (!weather || !weather.weather || !weather.weather[0] || !weather.main) {
+    return <p>Loading...</p>;
+  }
+
+
+    const iconSrc = allIcons[weather.weather[0].icon] || clear;
     return(
 
        <div className="Card">
-            <img src={allIcons[props.icon]} className="weather-icon"></img>
-            <p className="temperature">{props.temp}°C</p><br></br>
-            <p className="location">{props.location}</p>
+            <img src={iconSrc} className="weather-icon"></img>
+            <p className="temperature">{Math.floor(weather.main.temp)}°C</p><br></br>
+            <p className="location">{props.city}</p>
         </div>
     );
  }
+ 
 
 export default Cards;
