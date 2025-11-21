@@ -1,6 +1,7 @@
 import React,{ useEffect,useRef,useState } from "react";
 import "./SearchBtn.css"
 import Cards from "../Weather_card/Cards.jsx"
+import Ls_list from "../Ls_list.jsx"
 import search_icon from "../assets/search.png"
 
  
@@ -27,6 +28,7 @@ function SearchBtn(){
         </div>
             <Cards city={city}></Cards>
         </div>
+        <Ls_list city={city}></Ls_list>
         </>
     );
 

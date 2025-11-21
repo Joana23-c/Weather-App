@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useEffect,useContext} from "react";
 import useSearch from "../useSearch.jsx";
 import "./Cards.css"
 import search_icon from "../assets/search.png"
@@ -8,6 +8,9 @@ import drizzle from "../assets/drizzle.png"
 import rain  from "../assets/rain.png"
 import snow from "../assets/snow.png"
 import wind from "../assets/wind.png"
+import { useNavigate } from "react-router-dom";
+import { CityContext } from "../contex/CityContext";
+
 
     const allIcons = {
         "01d" : clear,
@@ -31,9 +34,14 @@ import wind from "../assets/wind.png"
     }
 
 
-
 function Cards (props){
+   const navigate = useNavigate();
     const weather = useSearch(props.city);
+    const { setCity } = useContext(CityContext);
+
+    // useEffect(() => {
+    //     console.log( weather);
+    // }, [weather]);
     console.log( weather);
 
       if (!weather || !weather.weather || !weather.weather[0] || !weather.main) {
@@ -42,15 +50,22 @@ function Cards (props){
 
 
     const iconSrc = allIcons[weather.weather[0].icon] || clear;
+
+    const handleDetails = () => {
+    setCity(props.city);      // vendos qytetin në Context
+    navigate("/details"); // navigon tek faqja e detajeve
+  };
     return(
 
        <div className="Card">
             <img src={iconSrc} className="weather-icon"></img>
             <p className="temperature">{Math.floor(weather.main.temp)}°C</p><br></br>
-            <p className="location">{props.city}</p>
+            <p className="location">{props.city}</p><br></br>
+            <button onClick={handleDetails} className="detailsBtn">
+            Shiko Detajet
+            </button>
         </div>
     );
  }
- 
 
 export default Cards;

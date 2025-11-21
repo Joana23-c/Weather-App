@@ -11,3 +11,11 @@
     color: aliceblue;
     line-height: 1;   
 }
+.detailsBtn{
+    padding: 10px;
+    border-radius: 50px;
+    border : none;
+    background-color:hwb(180 5% 35%);
+    color: aliceblue; 
+    font: bold;
+}

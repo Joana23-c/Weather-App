@@ -5,7 +5,6 @@
 }
 
 .cards{
-    /*per ta vene ne qender*/
     min-height: 100vh;
     display: grid;
     background: #ffd4fe;
