@@ -52,8 +52,8 @@ function Cards (props){
     const iconSrc = allIcons[weather.weather[0].icon] || clear;
 
     const handleDetails = () => {
-    setCity(props.city);      // vendos qytetin në Context
-    navigate("/details"); // navigon tek faqja e detajeve
+    setCity(props.city);      
+    navigate("/details"); 
   };
     return(
 

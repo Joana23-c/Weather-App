@@ -1,6 +1,6 @@
 // import "./Hyrje/SearchBtn.css"
 import React, { useRef, useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; // 🔹 import për param-et nga URL
+import { useParams } from "react-router-dom"; 
 // import "../Hyrje/SearchBtn.css";
 import Cards from "./Weather_card/Cards.jsx";
 import search_icon from "./assets/search.png";
@@ -9,14 +9,14 @@ import Ls_list from "./Ls_list.jsx"
 
 function SearchPreferenca (){
     const inputRef = useRef();
-  const { city: cityParam } = useParams(); // 🔹 lexon :city nga URL
-  const [city, setCity] = useState(""); // fillimisht bosh
+  const { city: cityParam } = useParams(); 
+  const [city, setCity] = useState("");
 
   useEffect(() => {
     if (cityParam) {
-      setCity(cityParam); // 🔹 vendos city nga URL kur komponenti mount-het
+      setCity(cityParam); 
     } else {
-      setCity("Tirana"); // opsionale: qyteti default
+      setCity("Tirana"); 
     }
   }, [cityParam]);
 
@@ -27,8 +27,6 @@ function SearchPreferenca (){
       return;
     }
     setCity(value);
-    // mund të bësh navigate te URL-ja për të sinkronizuar
-    // e.g., navigate(`/${value}`)
   };
 
   return (

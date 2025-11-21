@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function useWeather(city) {
   const [weather, setWeather] = useState(null);
-
+  // localStorage.clear();
   useEffect(() => {
     if (!city) return;
 
