@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SearchBtn from "./Hyrje/SearchBtn.jsx";
 import SearchPreferenca from "./SearchPreferenca.jsx";
-import { CityProvider } from "./contex/CityContext.jsx";
+import  CityProvider from "./contex/CityContext.jsx";
 import React, { Suspense } from "react";
 import './App.css'
 

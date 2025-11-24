@@ -39,9 +39,6 @@ function Cards (props){
     const weather = useSearch(props.city);
     const { setCity } = useContext(CityContext);
 
-    // useEffect(() => {
-    //     console.log( weather);
-    // }, [weather]);
     console.log( weather);
 
       if (!weather || !weather.weather || !weather.weather[0] || !weather.main) {

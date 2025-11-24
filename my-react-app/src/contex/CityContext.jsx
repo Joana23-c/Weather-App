@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 
 export const CityContext = createContext();
 
-export function CityProvider({ children }) {
+function CityProvider({ children }) {
   const [city, setCity] = useState("Tirana");
   return (
     <CityContext.Provider value={{ city, setCity }}>
@@ -11,3 +11,5 @@ export function CityProvider({ children }) {
     </CityContext.Provider>
   );
 }
+
+export default CityProvider;
