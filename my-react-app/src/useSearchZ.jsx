@@ -32,7 +32,7 @@ function useSearch(city) {
     if (!city) return;
 
     const fetchData = async () => {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${"1537e77cc28908232424578fb25c8485"}`;
+      const url = ``;
 
 
     try {
